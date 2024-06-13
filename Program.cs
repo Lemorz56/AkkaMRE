@@ -10,28 +10,26 @@ var connectionString =
 
 var builder = Host.CreateApplicationBuilder(args);
 
-builder
-    .Services
-    .AddAkka(
-        "TEST",
-        (akkaConfigurationBuilder, _) =>
-        {
-            akkaConfigurationBuilder
-                .WithSqlPersistence(
-                    connectionString,
-                    ProviderName.PostgreSQL15,
-                    tagStorageMode: TagMode.Csv
-                )
-                .WithActors(
-                    (system, registry, resolver) =>
-                    {
-                        var assetCoordinatorProps = resolver.Props<TestPersistentActor>();
-                        var actor = system.ActorOf(assetCoordinatorProps, "test-actor");
-                        registry.Register<TestPersistentActor>(actor);
-                    }
-                );
-        }
-    );
+builder.Services.AddAkka(
+    "TEST",
+    (akkaConfigurationBuilder, _) =>
+    {
+        akkaConfigurationBuilder
+            .WithSqlPersistence(
+                connectionString,
+                ProviderName.PostgreSQL15,
+                tagStorageMode: TagMode.Csv
+            )
+            .WithActors(
+                (system, registry, resolver) =>
+                {
+                    var props = resolver.Props<TestPersistentActor>();
+                    var actor = system.ActorOf(props, "test-actor");
+                    registry.Register<TestPersistentActor>(actor);
+                }
+            );
+    }
+);
 
 var app = builder.Build();
 app.Run();

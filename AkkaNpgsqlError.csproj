@@ -9,18 +9,18 @@
 
   <ItemGroup>
     <!-- NEW -->
-<!--    <PackageReference Include="Akka" Version="1.5.24" />-->
-<!--    <PackageReference Include="Akka.DependencyInjection" Version="1.5.24" />-->
-<!--    <PackageReference Include="Akka.Hosting" Version="1.5.24" />-->
-<!--    <PackageReference Include="Akka.Persistence" Version="1.5.24" />-->
-<!--    <PackageReference Include="Akka.Persistence.Hosting" Version="1.5.24" />-->
+   <PackageReference Include="Akka" Version="1.5.24" />
+   <PackageReference Include="Akka.DependencyInjection" Version="1.5.24" />
+   <PackageReference Include="Akka.Hosting" Version="1.5.24" />
+   <PackageReference Include="Akka.Persistence" Version="1.5.24" />
+   <PackageReference Include="Akka.Persistence.Hosting" Version="1.5.24" />
 
     <!-- OLD -->
-     <PackageReference Include="Akka" Version="1.5.20" /> 
-     <PackageReference Include="Akka.DependencyInjection" Version="1.5.20" /> 
-     <PackageReference Include="Akka.Hosting" Version="1.5.20" /> 
-     <PackageReference Include="Akka.Persistence" Version="1.5.20" /> 
-     <PackageReference Include="Akka.Persistence.Hosting" Version="1.5.20" /> 
+     <!-- <PackageReference Include="Akka" Version="1.5.20" />  -->
+     <!-- <PackageReference Include="Akka.DependencyInjection" Version="1.5.20" />  -->
+     <!-- <PackageReference Include="Akka.Hosting" Version="1.5.20" />  -->
+     <!-- <PackageReference Include="Akka.Persistence" Version="1.5.20" />  -->
+     <!-- <PackageReference Include="Akka.Persistence.Hosting" Version="1.5.20" />  -->
 
     <PackageReference Include="Akka.Persistence.Sql.Hosting" Version="1.5.20" />
     <PackageReference Include="Akka.Persistence.Sql" Version="1.5.20" />
